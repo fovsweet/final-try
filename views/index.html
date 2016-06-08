@@ -5,7 +5,7 @@
 </head>
 <body>
 <% include common/nav.html %>
-<div id="content" class="navigation">
+	<div id="content" class="navigation">
     <div id="sidebar" ></div>
     <div id='section'>
 	    <div class='container'>
@@ -14,4 +14,9 @@
     </div>
 <html>
 </body>
+<script type="text/javascript">
+window.onload=function(){
+	console.log(app.use(express.static(path.join(__dirname, 'public'))))
+}
+</script>
 </html>

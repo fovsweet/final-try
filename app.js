@@ -31,12 +31,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(express.static(path.join(__dirname, 'views')));
 
 app.use('/', routes);
-app.use('/st', store);
-app.use('/cp', passenger);
-app.use('/home', home);
-app.use('/op', operations);
-app.use('/el', electric);
-app.use('/common',common)
+// app.use('/st', store);
+// app.use('/cp', passenger);
+// app.use('/home', home);
+// app.use('/op', operations);
+// app.use('/el', electric);
+// app.use('/common',common)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
