@@ -2,12 +2,12 @@
 <head>
 	<title><%= title %></title>
 	<meta charset='utf-8'>
-	<link rel="stylesheet" type="text/css" href="<%= baseurl %>test.css">
+	<link rel="stylesheet" type="text/css" href="test.css">
 </head>
 <body>
-<% include ../common/nav.html %>
+<% include ../common/components/nav.html %>
 <div id="content" class="navigation">
-    <div id="sidebar" ></div>
+    <div id="sidebar"></div>
     <div id='section'>
 	    <div class='container'>
 	    	<h1><%= baseurl %></h1>
@@ -16,5 +16,6 @@
     </div>
 <html>
 </body>
+<script> var menuKey = 'st:set';</script>
 <script type="text/javascript" src='test.js'></script>
 </html>

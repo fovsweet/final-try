@@ -4,7 +4,7 @@
 	<meta charset='utf-8'>
 </head>
 <body>
-<% include common/nav.html %>
+<% include common/components/nav.html %>
 	<div id="content" class="navigation">
     <div id="sidebar" ></div>
     <div id='section'>
@@ -14,9 +14,10 @@
     </div>
 <html>
 </body>
+<script> var menuKey = 'stats:sjgl';</script>
 <script type="text/javascript">
-window.onload=function(){
-	console.log(app.use(express.static(path.join(__dirname, 'public'))))
-}
+	$.post('/queryAll',function(res){
+		console.log(res)
+	})
 </script>
 </html>
