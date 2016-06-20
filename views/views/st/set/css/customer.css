@@ -1,0 +1,135 @@
+.clearfixe{
+	overflow:auto;
+	_height:1%;
+	}
+.ft-16{
+	font-size: 16px;
+}
+.ft-14{
+	font-size: 14px;
+}
+.ft-12{
+	font-size: 12px;
+}
+.coupon-content{
+	padding: 30px;
+	color: #666;
+	font-size: 12px;
+}
+.coupon-count{
+	border: 1px solid #e9e9e9;
+}
+.coupon-count .count-title{
+	height: 52px;
+	line-height: 52px;
+	padding: 0 18px;
+	font-size: 16px;
+	color: #666;
+	font-weight: bold;
+	background-color: #f8f8f8;
+}
+.coupon-count .count-content{
+	padding: 30px 0;
+	line-height: 35px;
+}
+.coupon-count .count-01{
+	width: 33%;
+	box-sizing: border-box;
+	padding-left: 30px;
+	float: left;
+	border-left: 1px solid #e8e8e8;
+}
+.coupon-count .count-01 p:first-child{
+	font-size: 12px;
+	padding-left: 4px;
+}
+.coupon-count .count-01 p:nth-of-type(2){
+	font-size: 36px;
+	
+}
+.coupon-count .arrow-add{
+	color: #3fb889;
+}
+.coupon-count .arrow-add:before{
+	content: '';
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	background: url(../images/arrow-add.png) no-repeat;
+	vertical-align: -6px;
+	margin-right: 5px;
+}
+.coupon-count .arrow-down{
+	color: #ff6600;
+}
+.coupon-count .arrow-down:before{
+	content: '';
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	margin-right: 5px;
+	background: url(../images/arrow-down.png) no-repeat;
+	vertical-align: -6px;
+}
+.count-01:first-child{
+	border-left: none;
+}
+
+.count-info{
+	margin-top: 30px;
+	border: 1px solid #e9e9e9;
+	padding-bottom: 30px;
+}
+
+.count-info-title{
+	height: 52px;
+	line-height: 52px;
+	font-weight: bold;
+	background-color: #f6f6f6;
+	padding: 0 18px;
+}
+.count-info-title .count-title-right{
+	font-weight: normal;
+	float: right;
+}
+.count-title-right span{
+	font-size: 12px;
+	line-height: 12px;
+	display: inline-block;
+	padding: 10px;
+	margin-right: 10px;
+	border-radius: 2px;
+	vertical-align: middle;
+	border: 1px solid #ddd;
+	background-color: white;
+	cursor: pointer;
+}
+.count-title-right span:hover{
+	background-color: #e9e9e9;
+}
+.count-title-right span.hoverd{
+	background-color: #e9e9e9;
+}
+
+.list_table{ text-align: center;border-collapse: collapse;border-spacing: 0; border: 1px solid #ddd;  border-radius: 2px;width:100%;margin-bottom: 30px;
+    font-size:12px;}
+.list_table tr{ border-bottom: 1px solid #ddd;}
+.list_table thead tr{ height: 50px; font-size: 13px; font-weight: bold; background-color: #eeeeee;color: #666666;}
+.list_table tr td{height: 50px; padding: 3px 15px;box-sizing: border-box;  vertical-align: middle; position: relative;color: #666666;}
+.list_table tr td:hover .edit_date{display: block; cursor: pointer;}
+.list_table tr:nth-of-type(2n){background-color: #f9f9f9;}
+.list_table button{ width: 38px; height: 22px; font-size: 12px; background-color: white; color: #666666; border: 1px solid #dddddd; font-family: "微软雅黑"; padding: 0;}
+.list_table button:nth-of-type(1):hover{color: #2bc589; border: 1px solid #2bc589; cursor: pointer;}
+.list_table button:nth-of-type(2):hover{color: red; border: 1px solid red; cursor: pointer;}
+.list_table .edit_date{ width: 80%; height: 70%; line-height: 40px; position: absolute; top: 15%; left: 10%; margin: 0 auto;  background-color: #ececec; opacity: 0.9; display: none; } 
+.list_table .edit_date{ font-size: 14px; font-weight: bold; color: #2bc589;}
+.list_table .seriz_arrow{ display: inline-block; vertical-align:middle; margin-top: -2px;}
+.list_table .seriz_arrow:hover{cursor: pointer;}
+.list_table .seriz_arrow .arrow_up { width: 0;height: 0;border-left: 5px solid transparent; border-right: 5px solid transparent;  border-bottom: 5px solid #999999;font-size: 0; line-height: 0; margin-bottom: 3px; }
+.list_table .seriz_arrow .up_chosed {  border-bottom: 5px solid #666666; margin-bottom: 3px; }
+.list_table .seriz_arrow .arrow_down{width: 0;height: 0;border-left: 5px solid transparent; border-right: 5px solid transparent;  border-top: 5px solid #999999;font-size: 0; line-height: 0; }
+.list_table .seriz_arrow .down_chosed{ border-top: 5px solid #666666;}
+.list_table .max_w{width: 18%;}
+.list_table .min_w{width:10%;}
+.list_table .user_ico{padding: 0;}
+.list_table .user_ico img{display: inline-block; vertical-align: middle; width: 35px; height: 35px; border-radius: 50%;}

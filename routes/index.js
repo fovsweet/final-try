@@ -1,20 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
+/*公共方法集中引入文件*/
+/*
+*引入公共导航栏方法——getNav()
+*
+*/
+var comMe = require('./common');
+
 var indexDao = require('../dao/indexDao');
-var $nav = require('../staticdb/nav')
-var navData = $nav.nav;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: '乐美首页' , layout:'./components/nav' });
+	res.render('index', { title: '乐美首页' , layout:'./components/nav' , msg:'欢迎来到乐美生活' });
 });
 
 //nav getter
 router.post('/menu',function(req,res,next){
-	res.writeHead(200,{"content-type":"application/json"});
-    res.write(JSON.stringify(navData));
-    res.end();
+	comMe.getNav(req,res);
 })
 
 // 增加用户

@@ -1,0 +1,123 @@
+<html>
+<head>
+	<title><%= title %></title>
+	<meta charset='utf-8'>
+	<link rel="stylesheet" type="text/css" href="overview/css/index.css">
+</head>
+<body>
+<% include ./../../components/nav.html %>
+<div id="content" class="navigation">
+    <div id="sidebar"></div>
+    <div id='section'>
+    	<div class="parts-container parts01">
+		    <div class="default-panel" style="width: 70%;">
+		        <div class="panel-body" style="height: 100%" >
+		            <div class="data-content clearfix">
+		                <div class="data-left fl" >
+		                    <h2>数据概览</h2>
+		                    <p id="statsDate"></p>
+		                </div>
+		                <div class="data-right fr">
+		                    <ul class="totallist">
+		                        <li>
+		                            <p id="storeCount">-</p>
+		                            <p>门店总数</p>
+		                        </li>
+		                        <li>
+		                            <p id="staffCount">-</p>
+		                            <p>店员总数</p>
+		                        </li>
+		                    </ul>
+		                </div>
+		                <div class="datelist">
+		                    <span class="active">昨天</span>
+		                    <span>最近7天</span>
+		                    <span>最近30天</span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="default-panel fr" style="width: 28%;">
+		        <div class="panel-heading  sys-heading">
+		            <h2 class="panel-title">
+		                系统公告 <time id="noticeTime"></time>
+		                <a href="/stats/home/overview/noticeList?menuKey=stats:sjgl" class="more fr">更多 <span class="icon-right"></span> </a>
+		            </h2>
+		        </div>
+		        <div class="panel-body sys-body">
+		            <a id="sysinfo" class="sysinfo" href="#" target="_blank">
+		                <h2 class="title" id="noticeTitle"></h2>
+		                <div style="display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 3;overflow: hidden;">
+		                    <p class="content" id="noticeContent">
+		                    </p>
+		                </div>
+
+		            </a>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="parts-container parts02">
+		    <div class="default-panel" style="width: 100%;">
+		        <div class="panel-body " style="padding: 20px 0 0 30px ">
+		            <div id="coupon-info" style="width:70%;; height: 250px;display: inline-block;"></div>
+		            <ul class="operation-data" style="width: 28%">
+		                <li class="first">
+		                    <p><span class="big" id="payableAmount"></span><small>引导成交额</small></p>
+		                </li>
+		                <li class="second">
+		                    <p><span id="userCount"></span><small>活动参与人数</small>
+		                        <span class="icon icon-active"></span>
+		                    </p>
+		                </li>
+		                <li class="third">
+		                    <p><span id="ccReceiveCount"></span><small>卡券领取量</small>
+		                        <span class="icon icon-receive"></span>
+		                    </p>
+		                </li>
+		                <li class="four">
+		                    <p><span id="ccUsedCount"></span><small>卡券使用量</small>
+		                        <span class="icon icon-used"></span>
+		                    </p>
+		                </li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+
+		<div class="parts-container parts03">
+		    <div class="default-panel" style="width: 49%;">
+		        <div class="panel-heading">
+		            <h2 class="panel-title">
+		                电商数据
+		                <span class="title-tips"><span id="orderCount">0</span><small>订单数量</small></span>
+		            </h2>
+		        </div>
+		        <div class="panel-body " style=" ">
+		            <div id="business-data" style="width: 100%;height:300px">
+
+		            </div>
+		        </div>
+		    </div>
+		    <div class="default-panel fr" style="width: 49%;">
+		        <div class="panel-heading">
+		            <h2 class="panel-title">
+		                客流数据
+		                <span class="title-tips"><span id="newCustomerCount"></span><small>净增客户</small></span>
+		            </h2>
+		        </div>
+		        <div class="panel-body ">
+		            <div id="customer-data" style="width: 100%;height:300px">
+
+		            </div>
+		        </div>
+		    </div>
+		</div>
+    </div>
+</div>
+<html>
+</body>
+<script> var menuKey = 'stats:sjgl';</script>
+<script type="text/javascript" src="overview/js/echarts.min.js"></script>
+<script type="text/javascript" src='overview/js/home/index.js'></script>
+</html>

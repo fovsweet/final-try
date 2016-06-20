@@ -17,7 +17,7 @@ var common = require('./routes/common');
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './views/web-info'));
 app.engine('html',ejs.__express);
 app.set('view engine', 'html');
 
@@ -27,15 +27,15 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, './views/common')));
+app.use(express.static(path.join(__dirname, './views/views')));
 // app.use(express.static(path.join(__dirname, 'views')));
 
 app.use('/', routes);
 app.use('/st', store);
-// app.use('/cp', passenger);
-// app.use('/home', home);
-// app.use('/op', operations);
-// app.use('/el', electric);
+app.use('/cp', passenger);
+app.use('/home', home);
+app.use('/op', operations);
+app.use('/el', electric);
 // app.use('/common',common)
 
 // catch 404 and forward to error handler

@@ -1,0 +1,46 @@
+
+body {
+	background: #fff;
+}
+
+#header {
+	border-bottom: 1px solid #ddd;	
+}
+
+
+.notice-wrapper {
+	margin: 50px auto 0;
+	width: 890px;
+}
+
+.notice-title {
+	font-size: 18px;
+	color: #333;
+}
+
+.notice-title time {
+	display: block;
+	font-size: 14px;
+	color: #666;
+	font-weight: normal;
+}
+
+.notice-body {
+	margin-top: 40px;
+	font-size: 16px;
+}
+
+.notice-body img {
+	max-width: 100%;
+}
+
+.notice-body div, .notice-body span,.notice-body  applet,.notice-body  object,.notice-body  iframe,.notice-body  h1,
+.notice-body h2,.notice-body h3,.notice-body h4,.notice-body h5,.notice-body h6, .notice-body p, .notice-body pre,.notice-body a,
+.notice-body code, .notice-body del, .notice-body em, .notice-body img, .notice-body strong, .notice-body sub, .notice-body sup,
+.notice-body b, .notice-body u, .notice-body i, .notice-body dl, .notice-body dt, .notice-body dd, .notice-body ol,
+.notice-body ul, .notice-body li, .notice-body fieldset, .notice-body form, .notice-body label, .notice-body table,
+.notice-body tbody, .notice-body tfoot, .notice-body thead, .notice-body tr, .notice-body th, .notice-body td
+ {
+	list-style-type:inherit;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

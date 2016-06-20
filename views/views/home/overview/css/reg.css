@@ -1,0 +1,628 @@
+* {
+	text-decoration:none;
+	vertical-align:baseline;
+	margin:0;
+	font-family:Arial,'微软雅黑';
+	list-style:none;
+	padding:0;
+	line-height:1.5;
+	box-sizing: border-box;
+}
+
+html, body {
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	min-width:1190px;
+	line-height:1.5;
+	font-family:Arial,"微软雅黑";
+	color:#666;
+	font-size: 14px;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	overflow-x:hidden;
+}
+
+input::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #ddd;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background:url(../images/arrow_down_ico.png) no-repeat scroll right center transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+
+
+button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ****************弹框内部内容样式****************** */
+
+.data-dia, .data-dia > .fix {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    max-height: 100%;
+    overflow-y:auto;
+}
+
+.data-dia {
+    display: none;
+}
+
+.data-dia > .fix {
+    z-index: 1001;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.data-dia .data-content {
+    width:640px;
+    padding: 10px 30px;
+    text-align: left;
+    position: relative;
+    border-radius: 2px;
+    margin: auto;
+    z-index: 1002;
+    background-color: #fff;
+}
+
+.close_log {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top:9px;
+    float: right;
+    background: url('./../images/close.png') no-repeat 50% 50%;
+}
+.button {
+    display:inline-block;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    height: 34px;
+    width:120px;
+    font-size: 12px;
+}
+.light-button {
+    display:inline-block;
+    background-color: #fff;
+    border: 1px solid #2bc486;
+    color: #2bc486;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    height: 34px;
+    width:120px;
+    font-size: 12px;
+}
+.bright-button {
+    display:inline-block;
+    background-color: #2bc486;
+    border: 1px solid #2bc486;
+    color: #fff;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    height: 34px;
+    width:120px;
+    font-size: 12px;
+    text-align: center;
+}
+.cancel-button {
+    display:inline-block;
+    background-color: #ddd;
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    height: 34px;
+    width:120px;
+    font-size: 12px;
+    margin-right:5px
+}
+.data-dia .dia-header {
+    height: 44px;
+    line-height: 44px;
+    border-bottom: solid 1px #e8e8e8;
+}
+.data-dia .dia-header .dia-title {
+    font-size: 25px;
+    display:block;
+    text-align:center;
+}
+.data-dia .dia-header .dia-cha {
+    position: absolute;
+    display: inline-block;
+    font-size:20px;
+    width: 15px;
+    height: 15px;
+    right:35px;
+    top:20px;
+    color: #666;
+    background:url(../images/close.png) 0 0 no-repeat;
+
+}
+.data-dia .dia-main {
+    margin: 10px 0;
+}
+.data-dia table {
+    border: none;
+    width: 100%;
+}
+.data-dia table tr,.data-dia table td {
+    border: none;
+    text-align: left;
+}
+.data-dia table td {
+    height: 54px;
+}
+.data-dia .required-field {
+    color: red;
+    padding-right: 3px;
+}
+.data-dia td a.down-link {
+    color: #26a8e2;
+    cursor: pointer;
+}
+.data-dia .input {
+    width: 180px;
+}
+.data-dia .select {
+    width: 202px;
+}
+.data-dia .select option {
+    padding-top:20px;
+}
+.data-dia .address .select {
+    margin-right:5px;
+}
+.data-dia .warn-tips {
+    display:inline-block;
+    color: #f60;
+    padding-top: 3px;
+}
+.data-dia .dia-footer {
+    margin: 20px 0;
+    text-align: center;
+}
+#warnInfoDia .data-content {
+    width: 330px;
+    padding: 10px 30px;
+    color: #666;
+}
+#warnInfoDia table tr {
+    height: 38px;
+}
+#warnInfoDia table td {
+    text-align: center;
+}
+/*裁剪图片预览样式 start*/
+.data-dia .dia-main .label {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+/*裁剪图片预览样式 end*/
+
+.header {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 2px solid #2bc589;
+}
+
+.nav {
+	margin: 0 auto;
+	width: 900px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.nav a {
+	font-size: 14px;
+	color: #0392e4;
+}
+.nav .logo-text {
+	color: #666;
+	font-size: 22px;
+}
+
+
+.log-inout .user-name {
+	margin-right: 20px;
+}
+
+.register {
+	margin: 50px auto;
+	width: 500px;
+}
+
+.content {
+	padding-top: 82px;
+	width: 100%;
+	height: 100%;
+}
+
+em.must-point {
+    font-style: normal;
+    color: #ff6600;
+    position: relative;
+    right: 5px;
+    top: 2px;
+}
+
+em.error {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-style: normal;
+    color: #ff6600;
+}
+
+.form-group {
+	width: 100%;
+	color: #666666;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    position: relative;
+    text-align: right;
+}
+
+.form-group .input-group {
+	display: inline-block;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group input[type="password"] {
+	padding: 10px;
+    height: 40px;
+	width: 405px;
+	border: 1px solid #dddddd;
+	border-radius: 2px;
+}
+
+.form-group input:focus {
+	border-color: #2bc589;
+	outline: 0;
+}
+
+.yanzhen-group {
+	width: 405px;
+}
+
+.yanzhen-group input[type="text"] {
+	width: 285px;
+}
+
+.yanzhen-group .btn-yanzhen {
+	float: right;
+	border: 1px solid #2bc589;
+	color: #2bc589;
+	background: #fff;
+	height: 40px;
+	width: 108px;
+	border-radius: 2px;
+	transition: all .1s ease-in-out;
+}
+
+.yanzhen-group .btn-yanzhen:hover {
+	background: #2bc589;
+	color: #fff;
+}
+
+.btn-yanzhen.disabled,
+.btn-yanzhen.disabled:hover {
+	background: #ddd;
+	border-color: #ddd;
+	color: #fff;
+}
+
+.yanzhen-group .yan-pic {
+	float: right;
+	height: 40px;
+	width: 108px;
+}
+
+.yanzhen-group .yan-pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.check-group {
+	margin-left: 90px;
+}
+
+.check-group input[type="checkbox"] {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.regist-info {
+	color: #0392e4;
+	text-decoration: underline;
+}
+
+.btn-regist {
+	margin: 30px 0 0 90px;
+	width: 150px;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #2bc589;
+	border-radius: 2px;
+}
+
+/*商家信息*/
+
+.dealerContent {
+	margin: 0 auto;
+	width: 580px;
+}
+
+.dealerContent .caption {
+	margin: 50px 0 30px 0;
+}
+
+.dealerForm .form-group label {
+	width: auto;
+	text-align: left;
+}
+
+.dealerForm .form-group input {
+	width: 504px;
+}
+
+.dealerContent .btn-regist {
+	margin-left: 77px;
+}
+
+.dealerForm .towSelect,
+.fourSelect .input-group{
+	display: inline-block;
+	width: 504px;
+	font-size: 0;
+}
+
+.towSelect select {
+	font-size: 14px;
+	width: 49%;
+}
+
+.towSelect em.error,
+.fourSelect em.error {
+	font-size: 14px;
+}
+
+.towSelect select:first-child {
+	margin-right: 2%;
+}
+
+.fourSelect label {
+	line-height: 40px;
+	vertical-align: top;
+}
+
+.fourSelect .input-group select {
+	font-size: 14px;
+	width: 24%;
+}
+
+.fourSelect .input-group input[type='text'] {
+	font-size: 14px;
+
+}
+
+.fourSelect .input-group select:not(:last-of-type) {
+	margin-right: 1.3%;
+}
+
+.update-img-form label {
+	line-height: 120px;
+	vertical-align: top;
+}
+
+
+
+.img-box {
+	display: inline-block;
+	width: 180px;
+	height: 120px;
+	line-height: 120px;
+	vertical-align: top;
+	color: #ddd;
+	border: 1px solid #ddd;
+	text-align: center;
+}
+
+.img-box img{
+	max-width: 100%;
+	
+}
+
+.view-box {
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.view-box .tips {
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #999;
+	line-height: 1;
+}
+
+.view-img {
+	width: 120px;
+	height: 80px;
+	color: #ddd;
+	border: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.imgup-block .jcrop-holder .preview-pane {
+	border: none;
+}
+.update-btn-group {
+	position: relative;
+	margin-top: 10px;
+	
+}
+
+.update-btn-group input[type='file'] {
+	width: 180px;
+    height: 40px;
+    opacity: 0;
+    position: absolute;
+}
+
+.update-btn-group .tips {
+	display: inline-block;
+	margin-left: 10px;
+	width: 160px;
+	color: #999;
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.btn-update {
+	width: 180px;
+	height: 40px;
+	color: #2bc589;
+	border-radius: 2px;
+	background: transparent;
+	border: 1px solid #2bc589;
+	vertical-align: middle;
+}
+
+.icon-add {
+	display: inline-block;
+	width: 30px;
+	height: 40px;
+	vertical-align: middle;
+	position: relative;
+}
+
+.icon-add:before {
+	position: absolute;
+	top: 18px;
+    left: 10px;
+	content: "";
+	width: 12px;
+	height: 2px;
+	background: #2bc589;
+}
+
+.icon-add:after {
+	position: absolute;
+	top: 13px;
+    left: 15px;
+	content: "";
+	width: 2px;
+	height: 12px;
+	background: #2bc589;
+}
+
+.dealerOk {
+	margin: 0 auto ;
+	height: 100%;
+	width: 500px;
+	font-size: 16px;
+	color: #666;
+	display: flex;
+	align-items: center;
+	display: -webkit-flex;
+	-webkit-align-items: center;
+}
+
+/*****图片上传样式 start***/
+
+.update-group {
+	font-size: 14px;
+}
+
+.file{
+	position:relative;
+	display: inline-block;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    color: #999;
+    text-align: center;
+    background: transparent;
+    border-radius: 2px;
+    border: 1px solid #dddddd;
+    overflow: hidden;
+}
+
+.file img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.file .add_logo{
+    background: url("../images/add_logo.png") no-repeat 50%;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    top: 3px;
+}
+
+.img-error {
+	font-style: normal;
+	color: #ff6600;
+}
+/*****图片上传样式 end***/
+
+
