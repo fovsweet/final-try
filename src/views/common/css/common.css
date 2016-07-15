@@ -420,6 +420,10 @@ body {
 #header {  width: 100%; min-width: 1250px;height: 60px;  text-align: center;  font-size: 14px;  color: #fff;  background: #414763;  position:  absolute;  top: 0;  left: 0;  -webkit-box-sizing: border-box;  box-sizing: border-box;  z-index: 9;  }
 /*------头部Logo start--------*/
 #header .logo{height: 100%;width: 180px; float: left;}
+#header .logo{background-color: #63a8eb; vertical-align: middle; text-align: left; line-height: 60px;font-size: 0}
+#header .logo > a {color: #ffffff}
+#header .logo img {width: 32px;height: 32px;margin-left: 20px;margin-right: 10px; border-radius: 50%;border: 2px solid white; display: inline-block;vertical-align: middle}
+#header .logo p {display: inline-block;vertical-align: middle; font-size: 14px;white-space: nowrap; text-overflow: ellipsis;width: 94px;overflow: hidden}
 #header .logo .sys-logo{display: inline-block;width: 100%; height: 100%; background:url('../images/logo_icon.png') center center no-repeat;background-size:100%}
 /*------头部Logo end--------*/
 /*------头部列表统一样式 start--------*/
@@ -1024,6 +1028,15 @@ em.must-point {
 
 
 .data-dia .data-content{
+    width:640px;
+    padding: 10px 30px;
+    text-align: left;
+    position: relative;
+    border-radius: 2px;
+    margin:auto;
+    z-index: 1002;
+    background-color: #fff;
+    zoom: 1;
     max-height: 100%;
     overflow-y: auto;
 }
@@ -1036,10 +1049,20 @@ em.must-point {
 }
 
 .data-dia > .fix{
+    z-index: 1001;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
 }
 
 .data-dia .data-content{
+    width:640px;
+    padding: 10px 30px;
+    text-align: left;
+    position: relative;
+    border-radius: 2px;
     margin:auto;
-    zoom:1;
+    z-index: 1002;
+    background-color: #fff;
+    zoom: 1;
 }

@@ -13,7 +13,7 @@ var comMe = require('./common');
 var indexDao = require('../dao/indexDao');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/index', function(req, res, next) {
 	res.render('home/overview/index', { title: '乐美首页' , layout:'./components/nav' });
 });
 

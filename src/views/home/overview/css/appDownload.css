@@ -1,0 +1,13 @@
+#scan-qrcode{position: fixed;bottom:50px;left:0px;z-index: 999999 }
+#scan-qrcode .scan-logo{text-align: center; position: relative;width: 180px;cursor: pointer}
+#scan-qrcode .scan-logo .sys-logo{width:28px; height: 32px;display: inline-block; background: url(../images/sys_logo.png) no-repeat;}
+#scan-qrcode .scan-logo .app-down{color: #ffffff;}
+#scan-qrcode .qr-area {transition: all .5s ease; width:190px;height: 236px;text-align: center; background-color: #ffffff;border-radius: 2px; position:absolute;bottom: 0px; left:180px;display: none; opacity: 0; box-shadow:0px 3px 20px 1px rgba(129,192,253,.5)  }
+#scan-qrcode .qr-area .qr-tips{padding: 15px 0 10px 0;}
+#scan-qrcode .qr-area .qr-download{padding: 10px 0 15px 0;}
+#scan-qrcode .qr-area > img{width: 150px; height: 150px;}
+#scan-qrcode .qr-area .qr-download a{color: #64a9eb}
+#scan-qrcode .qr-area .triangle{display: block;width: 0;height: 0;  border-top: 5px solid transparent; border-bottom: 5px solid transparent;  border-right: 10px solid white;  position: absolute;left: -10px; bottom: 30px;}
+#scan-qrcode:hover .qr-area{display: block;opacity: 1; left: 150px;}
+#scan-qrcode:hover .scan-logo .sys-logo{ background: url(../images/sys_logo_hover.png) no-repeat;}
+#scan-qrcode:hover .scan-logo .app-down{color: #64a9eb}

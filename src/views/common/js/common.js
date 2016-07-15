@@ -130,7 +130,7 @@ $.fn.extend({
                 for(var i = 0; i < data.menus.length; i++){
                     var menus = data.menus[i];
                     menulis += "<li><a href='"+menus.href+"' id='current"+menus.id+"'>" +
-                        "<span class='nav-icon "+menus.class+"'></span><span>"+menus.name+"</span></a></li>";
+                    "<span class='nav-icon "+menus.class+"'></span><span>"+menus.name+"</span></a></li>";
 
                     if(menuindex == ""){
                         for(var j = 0; j < menus.list.length; j++){
@@ -158,12 +158,12 @@ $.fn.extend({
                         }
                     }
                     sideul += "</ul>";
-                    $("#sidebar").append(sidediv + sideul);
+                    $("#sidebar").append(sideul);
 
                     //商家信息
                     var mchData = navigation.mchInfo;
-                    $("#sidebar").find("img").attr("src", mchData.mchLogo);
-                    $("#sidebar").find(".user-name").find("span").text(mchData.mchName);
+                    $("#header").find("img").attr("src", mchData.mchLogo);
+                    $("#header").find("p").text(mchData.mchName);
 
                     //标题高亮
                     $("#current" + data.menus[menuindex].id).attr("class","current");
@@ -401,7 +401,7 @@ $.lightBox.prototype = {
 
         //展现关闭弹框
         this.dom.fadeIn();
-        this.dom.css('display', 'flex');
+        this.dom.css('display', 'table');
         var that = this;
         $(this.dom).find('.fix,.dia-close').on('click', function () {
             that.dom.fadeOut();
@@ -431,7 +431,7 @@ $.lightBox.prototype = {
         }, 500);
     },
     createDiaHTML: function () {
-        var h = '<div class="data-dia" id="' + this.id + '">'
+        var h = '<div class="data-dia" id="' + this.id + '"><div class="data-wraper">'
             + '<div class="fix"></div>'
             + '<div class="data-content" style="width:' + this.setting.width + 'px;color: #666;">';
         if (this.setting.title) {
@@ -452,7 +452,7 @@ $.lightBox.prototype = {
             }
             h += '</div>'
         }
-        h += '</div></div>';
+        h += '</div></div></div>';
         return h;
     }
 }
@@ -476,7 +476,7 @@ $.lightBox.getCurDia = function (curDom) {
 $.lightBox.showBox = function (lightBoxId) {
     $('#' + lightBoxId).prepend('<div class="fix"></div>');
     $('#' + lightBoxId).fadeIn();
-    $('#' + lightBoxId).css('display', 'flex');
+    $('#' + lightBoxId).css('display', 'table');
 }
 $.lightBox.closeBox = function (thisLightBox) {
     var diaObj = thisLightBox.dom;
@@ -501,7 +501,7 @@ function dialog(obj) {
     var d = $("#" + r + "");
     d.prepend("<div class='fix'></div>");
     d.fadeIn();
-    d.css('display', 'flex');
+    d.css('display', 'table');
     $('#' + r + ' .fix,#' + r + ' .close_log').on('click', function () {
         d.fadeOut();
         setTimeout(function () {
@@ -509,6 +509,3 @@ function dialog(obj) {
         }, 500)
     });
 }
-
-/*cnzz网站数据统计代码*/
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1258985760'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1258985760%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));

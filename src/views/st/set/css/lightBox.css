@@ -1,0 +1,175 @@
+
+.form-table tbody tr td:nth-child(2n) {
+    text-align: right;
+}
+
+
+/* ****************弹框内部内容样式****************** */
+.page-header {
+    font-size: 25px;
+    height: 55px;
+    height: 55px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ddd;
+}
+
+.close_log {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-top:9px;
+    float: right;
+    background: url('./../images/close.png') no-repeat 50% 50%;
+}
+
+.data-dia, .data-dia > .fix {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    max-height: 100%;
+    overflow-y:auto;
+}
+
+.data-dia {
+    display: none;
+}
+
+.data-dia > .fix {
+    z-index: 1001;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.data-dia .data-content {
+    width:630px;
+    padding: 10px 30px;
+    text-align: left;
+    position: relative;
+    border-radius: 2px;
+    margin: auto;
+    z-index: 1002;
+    background-color: #fff;
+}
+.data-dia .dia-header {
+    height: 55px;
+    line-height: 55px;
+    border-bottom: solid 1px #e8e8e8;
+}
+.data-dia .dia-header .dia-title {
+    font-size: 25px;
+    display:block;
+    text-align:center;
+    color: #333;
+}
+.data-dia .dia-header .dia-cha {
+    position: absolute;
+    display: inline-block;
+    font-size:20px;
+    width: 15px;
+    height: 15px;
+    right:35px;
+    top: 30px;
+    color: #666;
+    background:url(../images/close.png) 0 0 no-repeat;
+
+}
+.data-dia .dia-main {
+    margin: 20px 0;
+}
+.data-dia table {
+    /*border: none;*/
+    width: 100%;
+}
+.data-dia table tr,.data-dia table td {
+    border: none;
+    text-align: left;
+}
+.data-dia table td {
+    /*height: 54px;*/
+}
+.data-dia .required-field {
+    color: red;
+    padding-right: 3px;
+}
+.data-dia td a.down-link {
+    color: #26a8e2;
+    cursor: pointer;
+}
+.data-dia .input {
+    width: 180px;
+}
+.data-dia .select {
+    width: 202px;
+}
+.data-dia .select option {
+    padding-top:20px;
+}
+.data-dia .address .select {
+    margin-right:5px;
+}
+.data-dia .warn-tips {
+    display:inline-block;
+    color: #f60;
+    padding-top: 3px;
+}
+.data-dia .dia-footer {
+    margin: 30px 0 20px 0;
+    font-size: 0;
+    text-align: center;
+}
+.cancel-button {
+    background: #ddd;
+    color: #666;
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+}
+
+.cancel-button + .bright-button {
+    margin-left: 20px;
+}
+
+.bright-button {
+    background: #63a8eb;
+    color: #fff;
+    border: 1px solid #63a8eb;
+}
+
+.beizhu {
+    color: #ff6600;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+
+#warnInfoDia .data-content {
+    width: 330px;
+    padding: 10px 30px;
+    color: #666;
+}
+#warnInfoDia table tr {
+    height: 38px;
+}
+#warnInfoDia table td {
+    text-align: center;
+}
+/*裁剪图片预览样式*/
+.data-dia .dia-main .label {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/*****弹出框 表单  start *****/
+.form-table .search-group p {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+/*****弹出框 表单  end *****/
