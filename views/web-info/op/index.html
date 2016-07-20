@@ -1,19 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title><%= title %></title>
-	<meta charset='utf-8'>
+	<meta charset="utf-8">
+	<title>晒单红包配置</title>
+	<link rel="stylesheet" type="text/css" href="red/css/zTreeStyle.css">
+	<link rel="stylesheet" type="text/css" href="red/css/jquery.ui.css">
+	<link rel="stylesheet" type="text/css" href="red/css/data.css">
 </head>
 <body>
 <% include ../components/nav.html %>
-<div id="content" class="navigation">
-    <div id="sidebar"></div>
-    <div id='section'>
-	    <div class='container'>
-	    	<h1><%= baseurl %></h1>
-			<h2 style='color:#d2f'>welcom to <%= title %></h2>
+	<div id="header"></div>
+	<div id="content">
+		<div id='sidebar'></div>
+		<div id="section">
+			<div class="container">
+				<app></app>
+			</div>
 		</div>
-    </div>
-<html>
+	</div>
 </body>
-<script> var menuKey = 'ind:yygk';</script>
+<script> var menuKey="ind:yygk";</script>
+<script type="text/javascript" src='red/js/jquery.ztree.core.min.js'></script>
+<script type="text/javascript" src='red/js/jquery.ztree.excheck.min.js'></script>
+<script type="text/javascript" src='red/js/jquery.ui.js'></script>
+<script type="text/javascript" src='red/js/moment.min.js'></script>
+<script src="red/js/build.js"></script>
+
 </html>

@@ -24,4 +24,27 @@ router.post('/menu',function(req,res,next){
 	comMe.getNav(req,res);
 })
 
+/*红包规则配置*/
+var redPre = require('./red');
+
+router.post('/show/ruleList',function(req,res,next){
+	redPre.getRul(req,res)
+})
+
+router.post('/show/deposit',function(req,res,next){
+	redPre.getDep(req,res)
+})
+
+router.post('/show/saveDeposit',function(req,res,next){
+	redPre.saveDep(req,res)
+})
+
+router.post('/show/saveRule',function(req,res,next){
+	redPre.saveRule(req,res)
+})
+
+router.post('/show/store',function(req,res,next){
+	redPre.store(req,res)
+})
+
 module.exports = router;
