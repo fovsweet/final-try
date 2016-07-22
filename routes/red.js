@@ -30,5 +30,11 @@ module.exports = {
 		res.writeHead(200,{"content-type":"application/json"});
 	    res.write(JSON.stringify(zNode));
 	    res.end();
+	},
+	ruleDetail:function(req,res){		//获取公共Nav
+		var ruleDetail = $red.ruleDetail;
+		res.writeHead(200,{"content-type":"application/json"});
+	    res.write(JSON.stringify(ruleDetail));
+	    res.end();
 	}
 };

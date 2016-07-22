@@ -40,11 +40,23 @@ router.post('/show/saveDeposit',function(req,res,next){
 })
 
 router.post('/show/saveRule',function(req,res,next){
+	console.log(req.body);
 	redPre.saveRule(req,res)
 })
 
 router.post('/show/store',function(req,res,next){
 	redPre.store(req,res)
+})
+
+router.post('/show/ruleDetail',function(req,res,next){
+	redPre.ruleDetail(req,res)
+})
+
+router.post('/show/test',function(req,res,next){
+	console.log(req)
+	res.writeHead(200,{"content-type":"application/json"});
+    res.write(JSON.stringify({"msg":"保存成功","success":true}));
+    res.end();
 })
 
 module.exports = router;

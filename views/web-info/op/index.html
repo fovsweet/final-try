@@ -9,8 +9,7 @@
 </head>
 <body>
 <% include ../components/nav.html %>
-	<div id="header"></div>
-	<div id="content">
+	<div id="content" class="navigation">
 		<div id='sidebar'></div>
 		<div id="section">
 			<div class="container">
@@ -20,10 +19,16 @@
 	</div>
 </body>
 <script> var menuKey="ind:yygk";</script>
-<script type="text/javascript" src='red/js/jquery.ztree.core.min.js'></script>
-<script type="text/javascript" src='red/js/jquery.ztree.excheck.min.js'></script>
 <script type="text/javascript" src='red/js/jquery.ui.js'></script>
 <script type="text/javascript" src='red/js/moment.min.js'></script>
+<script type="text/javascript" src='red/js/jquery.ztree.core.min.js'></script>
+<script type="text/javascript" src='red/js/jquery.ztree.excheck.min.js'></script>
 <script src="red/js/build.js"></script>
-
+<script type="text/javascript">
+var d = {"id":"id","mchId":"111","name":null,"storeUuids":["1111","2222"],"rule":[{"payMoney":"444","ratio":"33"},{"payMoney":"4444","ratio":"333"}],"activityBeginDate":1469197595423,"activityEndDate":1469197595423,"state":null,"type":null,"avgMoney":"22","owerRatio":"33"}
+	$.post('show/test',d,function(data){
+		console.log(d)
+		console.log(data)
+	})
+</script>
 </html>
