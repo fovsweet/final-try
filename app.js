@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var ejs = require('ejs');
+var proxy = require('http-proxy-middleware');
 
 var routes = require('./routes/index');
 var store = require('./routes/store');
@@ -30,12 +31,21 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './views/views')));
 // app.use(express.static(path.join(__dirname, 'views')));
 
+var opPorxy = proxy({
+    target: 'http://192.168.1.20:8079',
+    logLevel: 'debug',
+    pathRewrite: {
+        '^/op/show/ruleList' : '/st/show/ruleList',     // rewrite path
+    },
+});
+
 app.use('/', routes);
 app.use('/st', store);
 app.use('/cp', passenger);
 app.use('/home', home);
 app.use('/op', operations);
 app.use('/el', electric);
+app.use('/op/show/ruleList', opPorxy);
 // app.use('/common',common)
 
 // catch 404 and forward to error handler
